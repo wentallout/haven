@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
 	import { PortableText } from '@portabletext/svelte';
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
-	import type { PageData } from './$types';
+
 
 	export let data;
 </script>

@@ -1,0 +1,30 @@
+/* Write your global styles here, in PostCSS syntax */
+@import 'pico.css';
+
+/* roboto-flex-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto Flex';
+	font-style: normal;
+	font-weight: 400;
+	src: url('fonts/roboto-flex-v9-latin-regular.woff2') format('woff2');
+}
+
+:root {
+	--font-family: 'Roboto Flex', system-ui, -apple-system, 'Segoe UI', 'Roboto', 'Ubuntu',
+		'Cantarell', 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+		'Noto Color Emoji';
+	--primary: #546e7a;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li {
+	list-style: none !important;
+}
+
+.prose {
+	max-width: 65ch;
+}

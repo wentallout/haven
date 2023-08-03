@@ -1,20 +1,21 @@
 module.exports = {
 	root: true,
-	parser: '@typescript-eslint/parser',
-	extends: ['eslint:recommended', 'plugin:@typescript-eslint/recommended', 'prettier'],
-	plugins: ['svelte3', '@typescript-eslint'],
-	ignorePatterns: ['*.cjs'],
-	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
-	settings: {
-		'svelte3/typescript': () => require('typescript')
+	extends: ['plugin:svelte/recommended', 'plugin:svelte/prettier'],
+	rules: {
+		'svelte/no-dupe-else-if-blocks': 'error',
+		'svelte/button-has-type': 'error'
 	},
+	settings: {
+		svelte: {}
+	},
+
 	parserOptions: {
 		sourceType: 'module',
-		ecmaVersion: 2020
+		ecmaVersion: 2022
 	},
 	env: {
 		browser: true,
-		es2017: true,
+		es2022: true,
 		node: true
 	}
 };
