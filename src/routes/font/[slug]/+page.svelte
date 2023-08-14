@@ -3,30 +3,26 @@
 	import { formatDate } from '$lib/utils';
 	import { urlFor } from '$lib/utils/image';
 
-	/** @type {import('$lib/types/book.d.ts').Book} */
+	/** @type {import('$lib/types/font.d.ts').Font} */
 	export let data;
 </script>
 
-<article class="book">
+<article class="font">
 	<hgroup>
 		<h1>{data.title}</h1>
 		<p>{formatDate(data._createdAt)}</p>
 	</hgroup>
 
-	<div class="book__container">
-		{#if data.bookCoverImage}
+	<div class="font__container">
+		{#if data.fontCoverImage}
 			<img
-				width="240"
-				class="book__cover"
-				src={urlFor(data.bookCoverImage).url()}
+				class="font__cover"
+				src={urlFor(data.fontCoverImage).url()}
 				alt="Cover image for {data.title}" />
 		{/if}
 
-		<div class="book__content prose">
+		<div class="font__content prose">
 			<PortableText value={data.body} />
-			<a rel="external" target="_blank" href={data.downloadLink}>
-				<button>Download Book</button>
-			</a>
 		</div>
 	</div>
 </article>
@@ -36,21 +32,20 @@
 		margin-bottom: 2rem;
 	}
 
-	.book {
+	.font {
 		justify-content: space-between;
 	}
 
-	.book__container {
+	.font__container {
 		display: flex;
-		align-items: flex-start;
-		flex-direction: row;
-		flex-wrap: wrap;
+		flex-direction: column;
+
 		gap: var(--spacing);
 	}
 
-	.book__cover {
-		max-width: 240px;
-		flex: 0;
-		height: auto;
+	.font__cover {
+		width: 100%;
+		max-height: 900px;
+		aspect-ratio: 16/9;
 	}
 </style>

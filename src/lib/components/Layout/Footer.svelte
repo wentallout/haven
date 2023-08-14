@@ -6,7 +6,8 @@
 
 <style>
 	.footer {
-		background-color: var(--muted-color);
+		margin-top: var(--spacing);
+		background-color: var(--card-background-color);
 		padding: 1rem 2rem;
 	}
 

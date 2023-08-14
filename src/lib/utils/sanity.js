@@ -28,6 +28,18 @@ export async function getBooks() {
 	);
 }
 
+export async function getFont(slug) {
+	return await client.fetch(groq`*[_type == "font" && slug.current == $slug][0]`, {
+		slug
+	});
+}
+
+export async function getFonts() {
+	return await client.fetch(
+		groq`*[_type == "font" && defined(slug.current)] | order(_createdAt desc)`
+	);
+}
+
 export async function getBook(slug) {
 	return await client.fetch(groq`*[_type == "book" && slug.current == $slug][0]`, {
 		slug

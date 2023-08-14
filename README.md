@@ -4,6 +4,8 @@ This is the repo for Haven Archive. A minimal website to store and protect preci
 
 Haven Archive is powered by Sanity Studio using a separate repo: https://github.com/wentallout/haven-studio
 
+Sanity Studio URL: https://haven-archive.sanity.studio
+
 ## Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:

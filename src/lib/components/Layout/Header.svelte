@@ -6,21 +6,16 @@
 		<nav>
 			<ul>
 				<li>
-					<a class="header__title" href="/">Haven Archive</a>
+					<a class="header__title" href="/"> <h4>Haven Archive</h4></a>
 				</li>
 			</ul>
 
 			<ul class="header__list">
 				<li>
-					<a href="/book">Book</a>
+					<a href="/book">Books</a>
 				</li>
-
 				<li>
-					<a href="/design-kit">Design Kit</a>
-				</li>
-
-				<li>
-					<a href="/font">Font</a>
+					<a href="/font">Variable Fonts</a>
 				</li>
 			</ul>
 		</nav>
@@ -36,5 +31,15 @@
 
 	.container {
 		padding: 0;
+	}
+
+	.header__list {
+		display: none;
+	}
+
+	@media (min-width: 768px) {
+		.header__list {
+			display: block;
+		}
 	}
 </style>

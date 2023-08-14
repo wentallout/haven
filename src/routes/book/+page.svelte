@@ -2,6 +2,8 @@
 	import BookCard from '$lib/components/Book/BookCard.svelte';
 
 	export let data;
+
+	console.log('ayo', data);
 </script>
 
 <h1>Books for UI/UX Designers</h1>
